@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Account dashboard{% endblock %}
+
+{% block content %}
+<main class="dashboard-page" id="dashboard-main" data-testid="dashboard-main">
+    <header class="page-header">
+        <h1>{{ heading }}</h1>
+        <p class="subtitle">{{ subtitle }}</p>
+    </header>
+
+    <section class="hero-banner" aria-label="Promotional banner">
+        <h2>
+            We Are Excited to Announce That 5 Brand-New Platform
+            Improvements Are Coming Soon
+        </h2>
+        <p>
+            Our team has been hard at work building features that will
+            make your day-to-day easier and more enjoyable.
+        </p>
+    </section>
+
+    <section class="getting-started">
+        <h2>Getting started</h2>
+        <p>
+            To optimize your engagement with our fantastic platform, we
+            strongly advise you to initiate with these three core actions
+            that are very, very important to your success.
+        </p>
+    </section>
+
+    <section class="similar-text-target">
+        <p>Here is some text that is meant to be very similar to something else.</p>
+    </section>
+
+    <section class="form-section">
+        <form action="/dashboard/save" method="post" data-testid="save-form">
+            <label for="name-input">Your full name</label>
+            <input
+                id="name-input"
+                name="name"
+                type="text"
+                placeholder="e.g. Jane Doe"
+                aria-label="Full name input"
+            />
+            <button type="submit" class="submit-button" data-testid="submit-button">
+                Save changes
+            </button>
+        </form>
+    </section>
+
+    <section class="empty-state">
+        <h3>{{ empty_state_title }}</h3>
+        <p>
+            When you complete your first transaction, it will show up
+            right here.
+        </p>
+    </section>
+
+    <section class="confirmation">
+        <p>
+            By confirming, you agree that this transfer cannot be reversed
+            once it has been submitted.
+        </p>
+    </section>
+
+    <footer class="page-footer">
+        <p>
+            Need help? Reach out to support and we will get back to you
+            within one business day.
+        </p>
+    </footer>
+</main>
+{% endblock %}
